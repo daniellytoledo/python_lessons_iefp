@@ -19,4 +19,5 @@ dadosPessoais = {
     "altura" : 1.23
 }
 
-print(dadosPessoais)
+print(f"A {dadosPessoais['nome']} tem {dadosPessoais['idade']} anos e mede {dadosPessoais['altura']}m.")
+
