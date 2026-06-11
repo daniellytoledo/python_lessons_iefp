@@ -8,12 +8,14 @@ nome = "João"
 maior_de_idade = True
 separador = ":::::::::::::::::::::::::::::::::::::::::::::::::::"
 
+print("\n")
+
 print(nome, "tem", idade,"anos e altura de", altura, "metros.")
 print("Maior de idade:", maior_de_idade)
 print("batatas")
 print(separador)
 
-
+print("\n")
 
 # :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # NÚMEROS
@@ -37,6 +39,8 @@ print(a / b)   # 3.3333333333333335  -> sempre float
 print(a // b)  # 3  -> divisão inteira
 print(a % b)   # 1  -> resto da divisão
 print(a ** b)  # 1000 -> potência
+
+print("\n")
 
 # :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # # OPERADORES DE COMPARAÇÃO
@@ -68,6 +72,58 @@ print(a ** b)  # 1000 -> potência
 # /=  divisão e atribuição
 # //= divisão inteira e atribuição
 # **= potência e atribuição
+
+#  Operador	  Listas    Tuplas	 Sets	 Dicionários
+#  &	        ⛔	    ⛔      ✅	    ⛔
+#  |	        ⛔	    ⛔      ✅	    ✅ (Python 3.9+)
+#  ^	        ⛔	    ⛔      ✅	    ⛔
+#  ==	        ✅	    ✅      ✅	    ✅
+#  !=	        ✅	    ✅      ✅	    ✅
+#  >	        ⛔	    ⛔      ✅	    ⛔
+#  <	        ⛔	    ⛔      ✅	    ⛔
+#  >=	        ⛔	    ⛔      ✅	    ⛔
+#  <=	        ⛔	    ⛔      ✅	    ⛔
+#  in	        ✅	    ✅      ✅	    ✅
+
+# Exemplos
+A = {1, 2, 3, 4}
+B = {3, 4, 5, 6}
+
+# Interseção: Retorna apenas os elementos que existem em ambos os conjuntos.
+print("Interseção: &")
+print(A & B)
+
+print("\n")
+
+# União: Retorna todos elementos que existem nos dois conjuntos.
+print("União: |")
+print(A | B)
+
+print("\n")
+
+# Interseção simétrica: Retorna os elementos que existem apenas num dos conjuntos.
+print("Interseção simétrica: ^")
+print(A ^ B)
+
+print("\n")
+
+# Operadores lógicos
+# and	verdadeiro se ambos os operandos forem verdadeiros
+# or	verdadeiro se pelo menos um dos operandos for verdadeiro
+# not	verdadeiro se o operando for falso
+
+# Operadores de atribuição
+# =	atribuição simples
+# &=  atribuição com interseção
+# |=  atribuição com união
+# ^=  atribuição com diferença simétrica
+# +=	adição e atribuição
+# -=  subtração e atribuição
+# *=	multiplicação e atribuição 
+# /=  divisão e atribuição
+# //= divisão inteira e atribuição
+# **= potência e atribuição
+
 
 # :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
