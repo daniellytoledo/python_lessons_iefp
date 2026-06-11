@@ -1,5 +1,4 @@
 from traceback import print_tb
-
 print("\n")
 print("::::::::::::::::::::::::::::::::::::::::::::::::::")
 print("                    CALCULAR IMC")
@@ -42,7 +41,10 @@ elif IMC >= 40:
 # CÓDIGO OTIMIZADO
 
 print("\n")
-print(":::::::::::: CÓDIGO OTIMIZADO ::::::::::::")
+print("::::::::::::::::::::::::::::::::::::::::::::::::::")
+print("               CÓDIGO OTIMIZADO")
+print("::::::::::::::::::::::::::::::::::::::::::::::::::")
+print("\n")
 
 if IMC < 16:
     print(":::::::::::: Atenção! Magreza grave! 😰")
