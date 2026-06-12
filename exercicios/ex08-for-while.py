@@ -1,7 +1,7 @@
 print("\n")
-print("::::::::::::::::::::::::::::::::::::::::::::::::::")
+print(":"*49)
 print("                    SOMA DE NÚMEROS - FOR ")
-print("::::::::::::::::::::::::::::::::::::::::::::::::::")
+print(":"*49)
 print("\n")
 
 lista = []
@@ -17,9 +17,9 @@ print("\n")
 print("A soma dos números dentro desta lista é: ", sum(lista))
 
 print("\n")
-print("::::::::::::::::::::::::::::::::::::::::::::::::::")
+print(":"*49)
 print("                    SOMA DE NÚMEROS - WHILE ")
-print("::::::::::::::::::::::::::::::::::::::::::::::::::")
+print(":"*49)
 print("\n")
 
 nomes = []
