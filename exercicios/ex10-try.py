@@ -1,6 +1,7 @@
 print("\n")
 print(":"*49)
-print("       SOMA DE NÚMEROS - FOR + WHILE + TRY ")
+titulo = "SOMA DE NÚMEROS - FOR + WHILE + TRY"
+print(f"{titulo:-^49}")
 print(":"*49)
 print("\n")
 

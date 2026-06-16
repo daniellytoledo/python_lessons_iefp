@@ -12,6 +12,7 @@ while True:
     try:
         nota = float(input("Digite um valor entre 0 a 20: ").replace(",", "."))
         if 0 <= nota <= 20:
+            print("Nota recebida com sucesso!")
             break
         else:
             print("A nota tem que estar entre 0 e 20")
