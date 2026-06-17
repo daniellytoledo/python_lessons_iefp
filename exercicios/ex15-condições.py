@@ -79,3 +79,24 @@ turmas = [
 
 if any(any(nota<10 for nota in turma['notas']) for turma in turmas):
     print("Existem alunos com notas menores que 10 valores.")
+
+print("\n")
+print(":"*49)
+print("\n")
+
+# Usa any() para verificar se existe alguma turma onde haja pelo menos um aluno com nota negativa (<10). Usar any() dentro de any().
+# Usa all() para verificar se existe alguma turma com todas as notas positivas. Usar all() dentro de any()
+# # Usa all() para verificar se todas as turmas têm todas as notas positivas. Usar all() dentro de all()
+
+if any(any(nota < 10 for nota in t['notas']) for t in turmas):
+    print("Existe pelo menos uma negativa")
+
+print("-" * 49)
+
+if(any(all(nota>=10 for nota in t['notas']) for t in turmas)):
+    print("Existe pelo menos uma turma com todas as notas positivas")
+
+print("-" * 49)
+
+if(all(all(nota>=10 for nota in t['notas']) for t in turmas)):
+    print("Todas as turmas têm as notas todas positivas")
