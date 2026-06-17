@@ -1,0 +1,61 @@
+print("\n")
+print(":"*50)
+titulo = "CONDIÇÕES"
+print(f"{titulo:-^50}")
+print(":"*50)
+print("\n")
+
+# criar uma condição com any() para verificar se existe algum produto sem stock. escreve apenas a linha do if
+
+produtos = [
+    {"nome": "Teclado", "stock": 5},
+    {"nome": "Rato", "stock": 0},
+    {"nome": "Monitor", "stock": 3}
+]
+
+if any(p['stock'] <=0 for p in produtos):
+    print("WARNING: Há produtos sem estoque.")
+
+print("\n")
+print(":"*49)
+print("\n")
+
+# usa any() para verificar se existe algum utilizador sem email preenchido.
+# usa all() para verificar se todos os utilizadores tem email preenchido
+
+utilizadores = [
+    {"nome": "Pedro", "email": "pedro@email.com"},
+    {"nome": "Rui", "email": ""},
+    {"nome": "Ana", "email": "ana@email.com"}
+]
+
+if any(u['email'] == "" for u in utilizadores):
+    print("Existe um utilizador sem preencher email.")
+
+print("-"*49)
+
+if all(u['email'] != "" for u in utilizadores):
+    print("Todos os utilizador possuem email preenchido.")
+else:
+    print("Existem emails vazios.")
+
+print("\n")
+print(":"*49)
+print("\n")
+
+# usar any() para verificar se existe alguma encomenda paga mas ainda não foi enviada
+
+encomendas = [
+    {"cliente": "Pedro", "pago": True, "enviado": True},
+    {"cliente": "Rui", "pago": True, "enviado": False},
+    {"cliente": "Ana", "pago": False, "enviado": False}
+]
+
+if any(e['pago'] == True and e['enviado'] == False for e in encomendas):
+    print("Existe encomendas pagas, mas que ainda não foram enviadas.")
+
+print("-" * 49)
+
+if (not e['pago'] for e in encomendas):
+    print("Existem encomendas não pagas.")
+
