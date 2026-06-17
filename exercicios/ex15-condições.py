@@ -54,8 +54,28 @@ encomendas = [
 if any(e['pago'] == True and e['enviado'] == False for e in encomendas):
     print("Existe encomendas pagas, mas que ainda não foram enviadas.")
 
+# otimizado
+
+if any(e['pago'] and not e['enviado'] for e in encomendas):
+    print("Existe encomendas pagas, mas que ainda não foram enviadas.")
+
 print("-" * 49)
 
 if (not e['pago'] for e in encomendas):
     print("Existem encomendas não pagas.")
 
+print("\n")
+print(":"*49)
+print("\n")
+
+# usa any() para verficar se existe alguma turma onde haja pelo menos um aluno ocm nota negativa (<10).
+# usar any() dentro de any()
+
+turmas = [
+    {"nome": "A", "notas": [12, 14, 9]},
+    {"nome": "B", "notas": [15, 16, 17]},
+    {"nome": "C", "notas": [8, 11, 10]}
+]
+
+if any(any(nota<10 for nota in turma['notas']) for turma in turmas):
+    print("Existem alunos com notas menores que 10 valores.")
