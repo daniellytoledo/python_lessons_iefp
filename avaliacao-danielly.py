@@ -1,6 +1,6 @@
 # ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 print(":"*70)
-titulo = "AVALIAÇÃO"
+titulo = "AVALIAÇÃO"    # AVALIAÇÃO
 print(f"{titulo:-^70}")
 print(":"*70)
 # ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -11,8 +11,8 @@ print(":"*70)
 # B - Contar quantas vezes cada nome aparece
 
 print("\n")
-print("1. a) Removendo duplicado.")
-print("b) Quantas vezes aparece na lista.")
+print("1. a) removendo duplicado.")
+print("b) quantas vezes aparece na lista.")
 print("\n")
 
 nomes = ["Ana", "Bruno", "Ana", "Carlos", "Bruno", "Diana"]
@@ -38,8 +38,8 @@ print("-"*70)
 
 
 print("\n")
-print("2. a) Set com todos os cursos existentes.")
-print("b) Um dicionário que agrupe alunos por curso.")
+print("2. a) set com todos os cursos existentes.")
+print("b) um dicionário que agrupe alunos por curso.")
 print("\n")
 
 
@@ -80,7 +80,6 @@ print("\n")
 # B - Criar um set com todas as permissões existentes no sistema.
 # C - Verificar quem tem mais permissões.
 
-print("\n")
 print("3. a) descobrir quem tem permissão de editor.")
 print("b) criar um set com todas as permissões existentes no sistema.")
 print("c) verificar quem tem mais permissões.")
@@ -92,7 +91,24 @@ utilizadores = {
     "carla": {"viewer"},
 }
 
+editores = []
+for utilizador, permissoes in utilizadores.items():
+    if "editor" in permissoes:
+        editores.append(utilizador)
 
+print("Os utilizadores com permissão de editor são: ", editores)
+
+print("\n")
+
+permissoes_existentes = set()
+for utilizador, permissoes in utilizadores.items():
+    permissoes_existentes.update(permissoes)
+
+print("As permissões existentes são: ", permissoes_existentes)
+
+print("\n")
+print("-"*70)
+print("\n")
 
 # ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -102,6 +118,11 @@ utilizadores = {
 # B - Criar um dicionário que mostre que produtos cada cliente comprou.
 # C - Mostrar que cliente comprou mais produtos.
 
+print("4. a) criar um set com todos os produtos vendidos.")
+print("b) criar um dicionário que mostre que produtos cada cliente comprou.")
+print("c) mostrar que cliente comprou mais produtos.")
+print("\n")
+
 compras = [
     {"cliente": "Ana", "produto": "Livro"},
     {"cliente": "Bruno", "produto": "Caneta"},
@@ -109,3 +130,39 @@ compras = [
     {"cliente": "Carlos", "produto": "Livro"},
 ]
 
+produtos_vendidos = set()
+for compra in compras:
+    produtos_vendidos.add(compra["produto"])
+
+print("Os produtos vendidos foram:", produtos_vendidos)
+print("\n")
+
+clientes = {}
+for compra in compras:
+    cliente = compra["cliente"]
+    produto = compra["produto"]
+
+    if cliente not in clientes:
+        clientes[cliente] = []
+
+    clientes[cliente].append(produto)
+
+print("Cada cliente comprou: ", clientes)
+print("\n")
+
+maior_cliente = ""
+maior_qnt = 0
+
+for cliente, produtos in clientes.items():
+    qnt = len(produtos)
+    if qnt > maior_qnt:
+        maior_qnt = qnt
+        maior_cliente = cliente
+
+print(f"O cliente que comprou mais produtos foi {maior_cliente} com {maior_qnt} produtos.")
+
+print("\n")
+print(":"*70)
+titulo1 = "FIM"
+print(f"{titulo1:-^70}")
+print(":"*70)
